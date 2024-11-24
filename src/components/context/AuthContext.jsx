@@ -21,7 +21,7 @@ const AuthProvider = ({ children }) => {
     setIsLoading(true);
     try {
       const { data } = await axios.post(url, { email, password });
-      console.log(data);
+      // console.log(data);
       localStorage.setItem("token", data.token);
       localStorage.setItem("scmName", data.user.name);
       localStorage.setItem("scmRole", data.user.role);
